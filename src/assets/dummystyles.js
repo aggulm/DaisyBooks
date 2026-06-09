@@ -67,29 +67,14 @@ export const navbarStyles = {
       isActive ? `bg-gradient-to-r ${color}/10` : "hover:bg-gray-100"
     } transition-colors`,
 
-  mobileNavText: (isActive, color) =>
-    `ml-3 ${
-      isActive ? `text-${color.split("-")[1]}-600 font-medium` : "text-gray-600"
-    }`,
+  mobileNavText: (isActive) =>
+    `ml-3 text-gray-900 ${isActive ? "font-medium" : ""}`,
 
   mobileIconRow: "flex justify-between items-center mt-4",
   mobileCartBadge:
     "absolute top-0 right-0 -mt-1 -mr-1 w-5 h-5 flex items-center justify-center text-[10px] font-bold text-white bg-gradient-to-r from-amber-500 to-orange-600 rounded-full",
 
-  mobileNavIcon: (isActive, color) => {
-    const baseColor = color.includes("violet") ? "violet" : color.split("-")[1];
-    return `h-5 w-5 ${isActive ? `text-${baseColor}-500` : "text-gray-600"}`;
-  },
-
-  mobileNavText: (isActive, color) => {
-    const baseColor = color.includes("violet") ? "violet" : color.split("-")[1];
-    return `ml-3 ${
-      isActive ? `text-${baseColor}-600 font-medium` : "text-gray-600"
-    }`;
-  },
-
-  getBaseColor: (color) =>
-    color.includes("violet") ? "violet" : color.split("-")[1],
+  mobileNavIcon: () => "h-5 w-5 text-gray-900",
 };
 
 //banner
