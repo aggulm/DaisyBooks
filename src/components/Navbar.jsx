@@ -54,14 +54,16 @@ const Navbar = () => {
                                 <Link key={item.name} to={item.path} className={navbarStyles.navLink}>
                                     <div className='relative z-10 flex items-center'>
                                         <div className='relative'>
-                                            <div className={navbarStyles.navIconWrapper(item.color)} />
+                                            <div className={navbarStyles.navIconWrapper(item.color, isActive)} />
                                             <item.icon className={navbarStyles.navIcon(isActive)} />
                                         </div>
 
-                                        <span className={navbarStyles.navText(isActive, item.color)}>
+                                        <span className={`relative inline-block ${navbarStyles.navText(isActive, item.color)}`}>
                                             {item.name}
+                                            {isActive && (
+                                                <span className={navbarStyles.navUnderline(item.color)} />
+                                            )}
                                         </span>
-                                        {isActive && <span className={navbarStyles.navUnderline(item.color)} />}
                                     </div>
                                 </Link>
                             )

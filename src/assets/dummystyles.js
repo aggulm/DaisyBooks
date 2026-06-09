@@ -20,8 +20,8 @@ export const navbarStyles = {
   navLink:
     "relative group px-5 py-3.5 rounded-lg transition-all duration-300 overflow-hidden",
 
-  navIconWrapper: (color) =>
-    `absolute -inset-1 bg-gradient-to-r ${color} rounded-full opacity-0 blur group-hover:opacity-30 transition-opacity duration-500`,
+  navIconWrapper: (color, isActive) =>
+    `absolute -inset-1 bg-gradient-to-r ${color} rounded-full blur transition-opacity duration-500 ${isActive ? "opacity-30" : "opacity-0 group-hover:opacity-30"}`,
 
   navIcon: (isActive) =>
     `relative h-5 w-5 ${
@@ -36,7 +36,7 @@ export const navbarStyles = {
     }`,
 
   navUnderline: (color) =>
-    `absolute bottom-0 left-0 h-0.5 w-full bg-gradient-to-r ${color}`,
+    `absolute -bottom-1.5 left-0 h-0.5 w-full bg-gradient-to-r ${color}`,
 
   rightIconsWrapper: "hidden md:flex items-center space-x-5",
 
@@ -386,7 +386,7 @@ const aboutStyles = {
   aboutTextSection: "space-y-10",
   aboutHeadingSection: "space-y-6",
   aboutHeading:
-    "text-5xl font-black bg-gradient-to-r from-[#43C6AC] to-[#2B5876] bg-clip-text text-transparent",
+    "text-5xl font-black bg-gradient-to-r from-[#43C6AC] to-[#2B5876] bg-clip-text text-transparent pb-2",
   aboutParagraph: "text-lg text-gray-700 leading-relaxed",
   aboutBoxGrid: "grid grid-cols-1 md:grid-cols-2 gap-6",
   aboutBox:
