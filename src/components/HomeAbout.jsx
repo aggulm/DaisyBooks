@@ -1,5 +1,5 @@
 import React from 'react'
-import { statLabel, homeAboutStyles as styles } from '../assets/dummystyles'
+import { homeAboutStyles as styles } from '../assets/dummystyles'
 import HomeAboutImg from '../assets/HomeAboutImg.jpg'
 import { featuredBooks, hastats } from '../assets/dummydata'
 import { Link } from 'react-router-dom'
