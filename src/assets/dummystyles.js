@@ -245,7 +245,7 @@ export const homeAboutStyles = {
     "text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#43C6AC] to-[#2B5876] bg-clip-text text-transparent mb-4",
   headerUnderline:
     "h-1 w-20 mx-auto bg-gradient-to-r from-[#43C6AC] to-[#F8FFAE] rounded-full",
-  headerText: "mt-4 text-gray-600 text-center max-w-2xl mx-auto",
+  headerText: "mt-4 text-gray-600 text-center max-w-2xl mx-auto pb-4",
   bookGrid: "grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center",
   bookCardWrap: "group relative",
   bookCardGlow:
