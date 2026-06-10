@@ -106,7 +106,7 @@ export const formContainer = "flex gap-4 flex-col sm:flex-row";
 export const inputWrapper = "flex-1 relative group";
 
 export const inputField =
-  "w-full pl-12 md:pl-14 pr-4 md:pr-6 py-3 md:py-4 bg-transparent border-0 focus:ring-0 text-gray-800 placeholder-gray-400 text-base md:text-lg font-medium";
+  "w-full pl-4 md:pl-6 pr-4 md:pr-6 py-3 md:py-4 bg-transparent border-0 focus:ring-0 text-gray-800 placeholder-gray-400 text-base md:text-lg font-medium";
 
 export const searchButton =
   "px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#2B5876] to-[#43C6AC] text-white rounded-lg md:rounded-xl font-medium hover:shadow-lg transition-all duration-300 shadow-md flex items-center gap-2 justify-center hover:-translate-y-0.5 text-sm md:text-base";

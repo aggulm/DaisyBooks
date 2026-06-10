@@ -1,11 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { container, formContainer, geometricOverlay, glassBox, headerText, inputField, inputWrapper, paragraphText, scrollText, scrollTextSection, searchButton, subHeader } from '../assets/dummystyles'
 import { useNavigate } from 'react-router-dom'
 import { Search } from 'lucide-react'
+
+const MOBILE_BREAKPOINT = 560
+
+
 const Banner = () => {
     const [searchQuery, setSearchQuery] = useState("")
+    const [isMobile, setIsMobile] = useState(() => window.innerWidth < MOBILE_BREAKPOINT)
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
 
     const handleSearch = (e) => {
         e.preventDefault()
@@ -48,11 +59,9 @@ const Banner = () => {
                                 <div className={inputWrapper}>
                                     <div className='absolute inset-0 bg-white/90 rounded-l md:rounded-xl shadow-sm' />
                                     <div className='relative flex items-center'>
-                                        <Search className='ml-4 md:ml-5 w-5 h-5 md:w-6 md:h-6 text-gray-600
-                                        group-focus-within:text-[#2B5876]' />
-
                                         <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
-                                            placeholder='Müəllif, kitab adı və ya mövzu üzrə axtar…'
+                                            placeholder={isMobile ? "Kitab axtar…" : "Müəllif, kitab adı və ya mövzu üzrə axtar…"}
+
                                             className={inputField} />
                                     </div>
                                 </div>
