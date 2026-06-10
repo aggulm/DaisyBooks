@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { contactPageStyles as styles } from '../assets/dummystyles'
 import ContactForm from "../components/ContactForm";
 import { MapPin, Mail, Phone } from 'lucide-react'

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { container, formContainer, geometricOverlay, glassBox, headerText, inputField, inputWrapper, paragraphText, scrollText, scrollTextSection, searchButton, subHeader } from '../assets/dummystyles'
 import { useNavigate } from 'react-router-dom'
 import { Search } from 'lucide-react'
@@ -28,7 +28,7 @@ const Banner = () => {
                     <div className='space-y-6 md:space-y-8'>
                         <div className='space-y-4 md:space-y-6'>
                             <h1 className={headerText}>
-                                <span className='text-transparent bg-clip-text bg-gradient-to-r from-[#2B5876] to-[#43C6AC]'>
+                                <span className='text-transparent bg-clip-text bg-linear-to-r from-[#2B5876] to-[#43C6AC]'>
                                     Dərin
                                 </span>
                                 <br />

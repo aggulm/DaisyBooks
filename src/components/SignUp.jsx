@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Signup, styles } from '../assets/dummystyles'
+import { Signup } from '../assets/dummystyles'
 import { useNavigate, Link } from 'react-router-dom'
 import { ArrowLeft, User, Mail, Lock, EyeOff, Eye } from 'lucide-react'
 const SignUp = () => {
